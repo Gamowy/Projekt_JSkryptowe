@@ -1,0 +1,8 @@
+o o x x x
+o x o o o
+x o x x o
+o x o x o
+x x o x o
+Punkty dla gracza umieszczającego "x": 0*15 + 0*7 + 5*3 + 4*1 = 19
+Punkty dla gracza umieszczającego "o": 0*15 + 1*7 + 3*3 + 6*1 = 22
+Wygrał Olek

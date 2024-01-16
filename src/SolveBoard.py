@@ -107,7 +107,7 @@ if __name__ == "__main__":
                 print(f"Punkty dla gracza umieszczającego \"x\": {kacper_points[3]}*15 + {kacper_points[2]}*7 + {kacper_points[1]}*3 + {kacper_points[0]}*1 = {sumKacper}", file=out_file)
                 print(f"Punkty dla gracza umieszczającego \"o\": {olek_points[3]}*15 + {olek_points[2]}*7 + {olek_points[1]}*3 + {olek_points[0]}*1 = {sumOlek}", file=out_file)
                 if sumKacper > sumOlek:
-                    print("Wygrał kacper", file=out_file)
+                    print("Wygrał Kacper", file=out_file)
                 elif sumOlek > sumKacper:
                     print("Wygrał Olek", file=out_file)
                 else:

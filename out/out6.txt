@@ -1,0 +1,8 @@
+x x x x o
+o o x o x
+x o x o x
+o o x x x
+o x o o o
+Punkty dla gracza umieszczającego "x": 0*15 + 2*7 + 2*3 + 6*1 = 26
+Punkty dla gracza umieszczającego "o": 0*15 + 0*7 + 2*3 + 9*1 = 15
+Wygrał Kacper

@@ -17,7 +17,7 @@ if "%choice%"=="1" ( goto :opcja1 )
 if "%choice%"=="2" ( goto :opcja2 )
 if "%choice%"=="3" ( goto :opcja3 )
 if "%choice%"=="4" ( goto :opcja4 )
-if "%choice%"=="5" ( goto :exit ) else ( goto :menu )
+if "%choice%"=="5" ( goto :eof) else ( goto :menu )
 
 :opcja1
     if defined input (
@@ -30,7 +30,7 @@ if "%choice%"=="5" ( goto :exit ) else ( goto :menu )
         cd /d "%~dp0"
         echo Wykonano obliczenia na plikach z katalogu %input%
     ) else (
-        echo Nie za³adowano katalogu z danymi wejœciowymi!
+        echo Nie za³adowano katalogu z danymi wejœciowymi
     )
     pause
     goto :menu
@@ -48,7 +48,11 @@ if "%choice%"=="5" ( goto :exit ) else ( goto :menu )
     pause
     goto :menu
 :opcja4
-    echo Opcja 4
+    if exist raport.html (
+        echo Otwieram plik raport.html
+        start raport.html
+    ) else (
+        echo Raport nie zosta³ jeszcze utworzony
+    )
     pause
     goto :menu
-:exit
