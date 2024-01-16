@@ -16,9 +16,10 @@ def loadBoard(filename: str) -> list:
         for l in range(5):
             if len(loaded_board[l]) != 5 or not all(s == 'x' or s == 'o' for s in loaded_board[l]):
                 raise IOError
+        print(f"Pomyślnie załadowano plik {filename} z planszą")
         return loaded_board
     except IOError:
-        print(f"Nie udało się załadować pliku {filename} z planszą!")
+        print(f"Plik {filename} jest niepoprawny!")
 
 
 def addPoints(count: int, points: list):
@@ -111,5 +112,6 @@ if __name__ == "__main__":
                     print("Wygrał Olek", file=out_file)
                 else:
                     print("Jest remis", file=out_file)
+            print(f"Zapisano wynik do pliku {output_file}")
         except IOError:
             print(f"Nie udało się zapisać do pliku {output_file}!")
