@@ -1,0 +1,3 @@
+x o x o x o x o o o x x x o x o o x x o o x x o o 0*15 + 1*7 + 4*3 + 5*1 = 24
+0*15 + 1*7 + 2*3 + 10*1 = 23
+Wygrał Kacper

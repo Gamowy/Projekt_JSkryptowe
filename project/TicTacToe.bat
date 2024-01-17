@@ -21,7 +21,7 @@ if "%choice%"=="5" ( goto :eof) else ( goto :menu )
 
 :opcja1
     if defined input (
-        set /a i=1
+        set /a i=0
         cd /d "%input%"
         for /r %%x in (*.txt) do (
             py "%~dp0\src\SolveBoard.py" "%%x" "%~dp0out\out!i!.txt"

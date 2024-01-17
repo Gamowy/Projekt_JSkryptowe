@@ -38,7 +38,7 @@ def addPoints(count: int, points: list):
             points[3] += 1
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     board = None
     try:
         input_file = sys.argv[1]
@@ -101,11 +101,11 @@ if __name__ == "__main__":
 
         # Wypisanie wyników
         try:
-            with open(output_file, "w", encoding="utf-8") as out_file:
+            with open(output_file, "w", encoding='utf-8') as out_file:
                 for row in board:
-                    print(*row, file=out_file)
-                print(f"Punkty dla gracza umieszczającego \"x\": {kacper_points[3]}*15 + {kacper_points[2]}*7 + {kacper_points[1]}*3 + {kacper_points[0]}*1 = {sumKacper}", file=out_file)
-                print(f"Punkty dla gracza umieszczającego \"o\": {olek_points[3]}*15 + {olek_points[2]}*7 + {olek_points[1]}*3 + {olek_points[0]}*1 = {sumOlek}", file=out_file)
+                    print(*row, end=' ', file=out_file)
+                print(f"{kacper_points[3]}*15 + {kacper_points[2]}*7 + {kacper_points[1]}*3 + {kacper_points[0]}*1 = {sumKacper}", file=out_file)
+                print(f"{olek_points[3]}*15 + {olek_points[2]}*7 + {olek_points[1]}*3 + {olek_points[0]}*1 = {sumOlek}", file=out_file)
                 if sumKacper > sumOlek:
                     print("Wygrał Kacper", file=out_file)
                 elif sumOlek > sumKacper:
