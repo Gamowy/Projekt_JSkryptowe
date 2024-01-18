@@ -1,3 +1,4 @@
-o o x x o o x o o o x o o x x x x x x o o o o x x 0*15 + 1*7 + 2*3 + 9*1 = 22
+o o x x o o x o o o x o o x x x x x x o o o o x x 
+0*15 + 1*7 + 2*3 + 9*1 = 22
 0*15 + 0*7 + 3*3 + 9*1 = 18
 Wygrał Kacper

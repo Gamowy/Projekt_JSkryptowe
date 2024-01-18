@@ -44,7 +44,7 @@ if "%choice%"=="5" ( goto :eof) else ( goto :menu )
     pause
     goto :menu
 :opcja3
-    echo Opcja 3
+    py "%~dp0\src\RaportGen.py" "%~dp0out" "raport.html"
     pause
     goto :menu
 :opcja4
@@ -52,7 +52,7 @@ if "%choice%"=="5" ( goto :eof) else ( goto :menu )
         echo Otwieram plik raport.html
         start raport.html
     ) else (
-        echo Raport nie zosta³ jeszcze utworzony
+        echo Nie znaleziono raportu
     )
     pause
     goto :menu

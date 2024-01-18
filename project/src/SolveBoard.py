@@ -1,6 +1,7 @@
 import sys
 
 
+# Ładuje planszę
 def loadBoard(filename: str) -> list:
     loaded_board = []
     try:
@@ -104,7 +105,7 @@ if __name__ == '__main__':
             with open(output_file, "w", encoding='utf-8') as out_file:
                 for row in board:
                     print(*row, end=' ', file=out_file)
-                print(f"{kacper_points[3]}*15 + {kacper_points[2]}*7 + {kacper_points[1]}*3 + {kacper_points[0]}*1 = {sumKacper}", file=out_file)
+                print(f"\n{kacper_points[3]}*15 + {kacper_points[2]}*7 + {kacper_points[1]}*3 + {kacper_points[0]}*1 = {sumKacper}", file=out_file)
                 print(f"{olek_points[3]}*15 + {olek_points[2]}*7 + {olek_points[1]}*3 + {olek_points[0]}*1 = {sumOlek}", file=out_file)
                 if sumKacper > sumOlek:
                     print("Wygrał Kacper", file=out_file)
