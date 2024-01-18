@@ -1,4 +1,0 @@
-o o x x x o x o o o x o x x o o x o x o x x o x o 
-0*15 + 0*7 + 5*3 + 4*1 = 19
-0*15 + 1*7 + 3*3 + 6*1 = 22
-Wygrał Olek
