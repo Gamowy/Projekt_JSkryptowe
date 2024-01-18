@@ -39,13 +39,13 @@ if __name__ == '__main__':
 
                     section_header = f'''
 <section><div class="left">
-    <h3>Raport nr.{i+1} <span style="font-weight: normal">(Plik {filename})</span></h3>'''
+<h3>Raport nr.{i+1} <span style="font-weight: normal">(Plik {filename})</span></h3>'''
                     section_table = create_table(board)
                     section_text = f'''
 </div><div class="right">
-    <div class="score"><span class="kacper">Punkty dla gracza umieszczającego "x"</span>:<br>{score_kacper}</div>
-    <div class="score"><span class="olek">Punkty dla gracza umieszczającego "o"</span>:<br>{score_olek}</div>
-    <div class="result">{result}</div></div>
+<div class="score"><span class="kacper">Punkty dla gracza umieszczającego "x"</span>:<br>{score_kacper}</div>
+<div class="score"><span class="olek">Punkty dla gracza umieszczającego "o"</span>:<br>{score_olek}</div>
+<div class="result">{result}</div></div>
 </section>'''
                     raport_sections.append(section_header + section_table + section_text)
     except IOError:
@@ -55,71 +55,71 @@ if __name__ == '__main__':
     try:
         with open(output_file, "w", encoding="utf=8") as html:
             html.write('''<!DOCTYPE html>
-    <html lang="pl">
-        <head>
-            <meta charset="UTF-8">
-                <title>Zadanie 2 2014 - Kółko i Krzyżyk</title>
-                <meta name="viewport" content="width=device-width,initial-scale=1">
-                <style>
-                    body {
-                        background-color: #ffffcc;
-                        text-align: center;
-                        font-size: 1.1em
-                    }
-                    header h1 {
-                        font-weight: bold;
-                        color: red
-                    }
-                    h3 {
-                        font-size: 1.5em
-                    }
-                    section {
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-around
-                    }
-                    .right {
-                        text-align: left
-                    }
-                    table {
-                        font-size: 2em
-                    }
-                    th ,td {
-                        text-align: center;
-                        font-size: 2em;
-                        border: 3px solid black;
-                        width: 2em
-                    }
-                    .kacper {
-                        color: blue
-                    }
-                    .olek {
-                        color: green
-                    }
-                    .score {
-                        text-align: center;
-                        font-size: 1.5em
-                    }
-                    .score span {
-                        font-weight: bold
-                    }
-                    .result {
-                        text-align: center;
-                        font-size: 1.5em;
-                        font-weight: bold
-                    }
-                </style>
-            </head>
-             <body>
-                <header>
-                    <h1>Algorytmion 2014 Zadanie 2 - "Kółko i Krzyżyk"</h1>
-                    <h2>Raport wykonanych obliczeń</h2>
-                </header>''')
-            for section in raport_sections:
-                html.write(section)
-            html.write('''
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 2 2014 - Kółko i Krzyżyk</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+body {
+background-color: #ffffcc;
+text-align: center;
+font-size: 1.1em
+}
+header h1 {
+font-weight: bold;
+color: red
+}
+h3 {
+font-size: 1.5em
+}
+section {
+display: flex;
+align-items: center;
+justify-content: space-around
+}
+.right {
+text-align: left
+}
+table {
+font-size: 2em
+}
+th ,td {
+text-align: center;
+font-size: 2em;
+border: 3px solid black;
+width: 2em
+}
+.kacper {
+color: blue
+}
+.olek {
+color: green
+}
+.score {
+text-align: center;
+font-size: 1.5em
+}
+.score span {
+font-weight: bold
+}
+.result {
+text-align: center;
+font-size: 1.5em;
+font-weight: bold
+}
+</style>
+</head>
+<body>
+<header>
+<h1>Algorytmion 2014 Zadanie 2 - "Kółko i Krzyżyk"</h1>
+<h2>Raport wykonanych obliczeń</h2>
+</header>''')
+for section in raport_sections:
+html.write(section)
+html.write('''
 </body
 </html>''')
-        print(f"Utworzono raport w pliku {output_file}")
-    except IOError:
-        raise SystemExit("Błąd podczas tworzenia raportu .html!")
+print(f"Utworzono raport w pliku {output_file}")
+except IOError:
+    raise SystemExit("Błąd podczas tworzenia raportu .html!")
