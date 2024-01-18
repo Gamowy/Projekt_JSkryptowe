@@ -115,11 +115,11 @@ font-weight: bold
 <h1>Algorytmion 2014 Zadanie 2 - "Kółko i Krzyżyk"</h1>
 <h2>Raport wykonanych obliczeń</h2>
 </header>''')
-for section in raport_sections: 
-    html.write(section)
-    html.write('''
+            for section in raport_sections:
+                html.write(section)
+            html.write('''
 </body
 </html>''')
-    print(f"Utworzono raport w pliku {output_file}")
-except IOError:
-    raise SystemExit("Błąd podczas tworzenia raportu .html!")
+        print(f"Utworzono raport w pliku {output_file}")
+    except IOError:
+        raise SystemExit("Błąd podczas tworzenia raportu .html!")
