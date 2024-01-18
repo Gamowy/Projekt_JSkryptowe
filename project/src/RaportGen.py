@@ -38,7 +38,7 @@ if __name__ == '__main__':
                     result = lines[3]
 
                     section_header = f'''
-<section><div class="left">
+<hr><section><div class="left">
 <h3>Raport nr.{i+1} <span style="font-weight: normal">(Plik {filename})</span></h3>'''
                     section_table = create_table(board)
                     section_text = f'''
@@ -73,6 +73,11 @@ color: red
 h3 {
 font-size: 1.5em
 }
+hr { 
+border: none;
+height: 2px;
+background-color: black
+} 
 section {
 display: flex;
 align-items: center;
