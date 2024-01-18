@@ -22,7 +22,8 @@ if "%choice%"=="5" ( goto :eof) else ( goto :menu )
 :opcja1
     if defined input (
         set /a i=0
-        cd /d "%input%"
+        cd /d "!input!"
+        if not exist "%~dp0out\" mkdir "%~dp0out"
         for /r %%x in (*.txt) do (
             py "%~dp0\src\SolveBoard.py" "%%x" "%~dp0out\out!i!.txt"
             if exist "%~dp0out\out!i!.txt" set /a i=!i!+1
@@ -36,10 +37,11 @@ if "%choice%"=="5" ( goto :eof) else ( goto :menu )
     goto :menu
 :opcja2
     set /p input=Podaj scie¿kê katalogu z danymi wejœciowymi:
-    if exist %input% (
+    if exist !input! (
         echo Pomyœlnie za³adowano katalog %input%
     ) else (
         echo Nie uda³o siê za³adowaæ katalogu %input%
+        set input=
     )
     pause
     goto :menu
