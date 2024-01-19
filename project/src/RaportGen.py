@@ -123,7 +123,7 @@ font-weight: bold
             for section in raport_sections:
                 html.write(section)
             html.write('''
-</body
+</body>
 </html>''')
         print(f"Utworzono raport w pliku {output_file}")
     except IOError:
