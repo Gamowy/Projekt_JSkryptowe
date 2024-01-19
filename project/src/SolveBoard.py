@@ -50,7 +50,7 @@ if __name__ == '__main__':
 
     board = loadBoard(input_file)
     if board is not None:
-        used_patterns = [[[False for _ in range(4)] for _ in range(5)] for _ in range(5)]
+        used_symbols = [[[False for _ in range(4)] for _ in range(5)] for _ in range(5)]
         kacper_points = [0 for _ in range(4)]
         olek_points = [0 for _ in range(4)]
         for i in range(5):
@@ -59,8 +59,8 @@ if __name__ == '__main__':
 
                 # Wiersze
                 n = 0
-                while (j + n < 5) and (board[i][j + n] == symbol) and (used_patterns[i][j + n][0] == False):
-                    used_patterns[i][j + n][0] = True
+                while (j + n < 5) and (board[i][j + n] == symbol) and (used_symbols[i][j + n][0] == False):
+                    used_symbols[i][j + n][0] = True
                     n += 1
                 if symbol == 'x':
                     addPoints(n, kacper_points)
@@ -69,8 +69,8 @@ if __name__ == '__main__':
 
                 # Kolumny
                 n = 0
-                while (i + n < 5) and (board[i + n][j] == symbol) and (used_patterns[i + n][j][1] == False):
-                    used_patterns[i+n][j][1] = True
+                while (i + n < 5) and (board[i + n][j] == symbol) and (used_symbols[i + n][j][1] == False):
+                    used_symbols[i + n][j][1] = True
                     n += 1
                 if symbol == 'x':
                     addPoints(n, kacper_points)
@@ -79,8 +79,8 @@ if __name__ == '__main__':
 
                 # Diagonale lewe
                 n = 0
-                while (i + n < 5) and (j - n >= 0) and (board[i + n][j - n] == symbol) and (used_patterns[i + n][j - n][2] == False):
-                    used_patterns[i+n][j-n][2] = True
+                while (i + n < 5) and (j - n >= 0) and (board[i + n][j - n] == symbol) and (used_symbols[i + n][j - n][2] == False):
+                    used_symbols[i + n][j - n][2] = True
                     n += 1
                 if symbol == 'x':
                     addPoints(n, kacper_points)
@@ -89,8 +89,8 @@ if __name__ == '__main__':
 
                 # Diagonale prawe
                 n = 0
-                while (i + n < 5) and (j + n < 5) and (board[i + n][j + n] == symbol) and (used_patterns[i + n][j + n][3] == False):
-                    used_patterns[i+n][j+n][3] = True
+                while (i + n < 5) and (j + n < 5) and (board[i + n][j + n] == symbol) and (used_symbols[i + n][j + n][3] == False):
+                    used_symbols[i + n][j + n][3] = True
                     n += 1
                 if symbol == 'x':
                     addPoints(n, kacper_points)
