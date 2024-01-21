@@ -2,22 +2,22 @@
 setlocal EnableDelayedExpansion
 @chcp 1250
 :menu
-cls
-echo ^|====================================^|
-echo ^| Zadanie 2 2014 - Kó³ko i Krzy¿yk   ^|
-echo ^|====================================^|
-echo ^|1.Wykonaj obliczenia                ^|
-echo ^|2.Za³aduj dane wejœciowe            ^|
-echo ^|3.Wygeneruj raport                  ^|
-echo ^|4.Otwórz raport                     ^|
-echo ^|5.Koniec                            ^|
-echo ^|====================================^|
-set /p choice=^|Wybór:
-if "%choice%"=="1" ( goto :opcja1 )
-if "%choice%"=="2" ( goto :opcja2 )
-if "%choice%"=="3" ( goto :opcja3 )
-if "%choice%"=="4" ( goto :opcja4 )
-if "%choice%"=="5" ( goto :eof) else ( goto :menu )
+    cls
+    echo ^|====================================^|
+    echo ^| Zadanie 2 2014 - Kó³ko i Krzy¿yk   ^|
+    echo ^|====================================^|
+    echo ^|1.Wykonaj obliczenia                ^|
+    echo ^|2.Za³aduj dane wejœciowe            ^|
+    echo ^|3.Wygeneruj raport                  ^|
+    echo ^|4.Otwórz raport                     ^|
+    echo ^|5.Koniec                            ^|
+    echo ^|====================================^|
+    set /p choice=^|Wybór:
+    if "%choice%"=="1" ( goto :opcja1 )
+    if "%choice%"=="2" ( goto :opcja2 )
+    if "%choice%"=="3" ( goto :opcja3 )
+    if "%choice%"=="4" ( goto :opcja4 )
+    if "%choice%"=="5" ( goto :eof) else ( goto :menu )
 
 :opcja1
     if defined input (
