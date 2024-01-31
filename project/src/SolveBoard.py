@@ -24,7 +24,7 @@ def loadBoard(filename: str) -> list:
     return loaded_board
 
 
-def addPoints(count: int, points: list):
+def add_points(count: int, points: list):
     match count:
         # 1 punkt
         case 2:
@@ -63,9 +63,9 @@ if __name__ == '__main__':
                     used_symbols[i][j + n][0] = True
                     n += 1
                 if symbol == 'x':
-                    addPoints(n, kacper_points)
+                    add_points(n, kacper_points)
                 else:
-                    addPoints(n, olek_points)
+                    add_points(n, olek_points)
 
                 # Kolumny
                 n = 0
@@ -73,9 +73,9 @@ if __name__ == '__main__':
                     used_symbols[i + n][j][1] = True
                     n += 1
                 if symbol == 'x':
-                    addPoints(n, kacper_points)
+                    add_points(n, kacper_points)
                 else:
-                    addPoints(n, olek_points)
+                    add_points(n, olek_points)
 
                 # Diagonale lewe
                 n = 0
@@ -83,9 +83,9 @@ if __name__ == '__main__':
                     used_symbols[i + n][j - n][2] = True
                     n += 1
                 if symbol == 'x':
-                    addPoints(n, kacper_points)
+                    add_points(n, kacper_points)
                 else:
-                    addPoints(n, olek_points)
+                    add_points(n, olek_points)
 
                 # Diagonale prawe
                 n = 0
@@ -93,9 +93,9 @@ if __name__ == '__main__':
                     used_symbols[i + n][j + n][3] = True
                     n += 1
                 if symbol == 'x':
-                    addPoints(n, kacper_points)
+                    add_points(n, kacper_points)
                 else:
-                    addPoints(n, olek_points)
+                    add_points(n, olek_points)
 
         # Sumowanie punktów
         sumKacper = kacper_points[3] * 15 + kacper_points[2] * 7 + kacper_points[1] * 3 + kacper_points[0] * 1
